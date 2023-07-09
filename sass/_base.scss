@@ -1,0 +1,146 @@
+:root {
+    --color-primary: #5865F2;
+    --color-primary-light: #1FAEFF;
+    --color-primary-dark: #002481;
+
+    --color-grey-light-1: #F7F7F7;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #868e96;
+
+    --ml-sm: 1.6rem;
+    --ml-md: 3.2rem;
+    --ml-lg: 4.8rem;
+
+    --box-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .02);
+    }
+}
+
+.text-color-grey {
+    color: var(--color-grey-dark-2);
+    fill: var(--color-grey-dark-2);
+}
+
+.text-complete {
+    color: #69db7c;
+}
+
+.text-pending {
+    color: #fcc419;
+}
+
+.text-decline {
+    color: #fa5252;
+}
+
+.bg-grey {
+    background-color: var(--color-grey-dark-2);
+}
+
+.bg-primary-light-1 {
+    background-color: #e6e9f2;
+}
+
+.bg-primary-light-2 {
+    background-color: var(--color-grey-light-1);
+}
+
+.icon-sm {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.icon-md {
+    width: 3.5rem;
+    height: 4.5rem;
+}
+
+.icon-bg {
+    width: 4.5rem;
+    height: 3.5rem;
+}
+
+.sudo-el-position {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    background-color: transparent;
+
+}
+
+.icon-chip {
+    background: linear-gradient(to right bottom, #daaa00, #e0ba3c, #e6c961, #edd882, #f4e6a3, #f6e9a4, #f8eba5, #faeea6, #f7e687, #f4dd67, #f2d442, #f0ca00);
+}
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: -.8px;
+    background-color: var(--color-grey-light-1);
+    color: var(--color-grey-dark-1);
+    width: 144rem;
+    height: 102rem;
+
+
+}
+
+body>div {
+    height: 100%;
+}
+
+.credit__card {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(to left, #002481, #0046a3, #0068c4, #008ae2, #1faeff);
+    overflow: hidden;
+    z-index: -3;
+
+    &::after {
+        @extend .sudo-el-position;
+        top: 8%;
+        left: -29%;
+        border: 1.2rem solid rgba(#000000, .03);
+        z-index: -1;
+    }
+
+    &::before {
+        @extend .sudo-el-position;
+        top: 38%;
+        left: -28%;
+        border: 1.2rem solid #a07400;
+        z-index: -1;
+    }
+
+    &--number {
+        position: relative;
+
+        &::after {
+            content: "0 0 0 0";
+            font-size: 0.9rem;
+            font-weight: 600;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+    }
+
+    &--expire-text {
+        font-size: .6rem;
+    }
+}

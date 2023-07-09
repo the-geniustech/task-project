@@ -1,0 +1,20 @@
+<svg width="46" height="34" viewBox="0 0 46 34" fill="none"  xmlns="http://www.w3.org/2000/svg">
+<g id="chip">
+<rect id="Rectangle 1" x="0.492188" y="1" width="44.6787" height="32" rx="5" fill="url(#paint0_linear_105_3183)" stroke="#A07400" stroke-width="0.5"/>
+<g id="Group 4">
+<rect id="Rectangle 2" x="3.53906" y="4" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+<rect id="Rectangle 3" x="26.8945" y="4" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+<rect id="Rectangle 2_2" x="3.53906" y="14" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+<rect id="Rectangle 3_2" x="26.8945" y="14" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+<rect id="Rectangle 2_3" x="3.53906" y="24" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+<rect id="Rectangle 3_3" x="26.8945" y="24" width="15.2314" height="6" rx="3" stroke="#A07400" fill="transparent" stroke-width="0.5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_105_3183" x1="0.492187" y1="1" x2="45.9315" y2="31.8807" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DAAA00"/>
+<stop offset="0.510417" stop-color="#FFF9CF"/>
+<stop offset="1" stop-color="#F0CA00"/>
+</linearGradient>
+</defs>
+</svg>
