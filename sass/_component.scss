@@ -298,20 +298,22 @@
         fill: var(--color-grey-dark-2);
     }
 
-    &__notif-icon svg {
-        position: relative;
-    }
+}
 
-    &__notif-icon svg::after {
-        content: "";
-        display: inline-block;
-        width: .84rem;
-        height: .84rem;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        position: absolute;
-        top: 1px;
-        right: 3px;
-        background-color: #b30000;
-    }
+.notification__icon-box {
+    position: relative;
+}
+
+.notification-badge {
+    display: block;
+    width: .84rem;
+    height: .84rem;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 18%;
+    right: 55%;
+    background-color: #b30000;
+    z-index: 9999;
 }
