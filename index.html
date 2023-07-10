@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="assets/Azapay ICON 03 1.png" type="image/png">
 
-    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -31,38 +28,45 @@
                     <form action="#" class="search d-flex align-items-center justify-content-center">
                         <input type="text" class="search__input" placeholder="Search">
                         <button class="search__btn d-flex align-items-center justify-content-center">
-                            <ion-icon class="search__icon" name="search-outline"></ion-icon>
-
+                            <svg class="search__icon">
+                                <use xlink:href="assets/sprite.svg#icon-search">
+                                </use>
+                            </svg>
                         </button>
                     </form>
 
                     <nav class="user__nav d-flex justify-content-center align-items-center">
                         <div class="user__nav--help d-flex align-items-center">
-
-                            <ion-icon class="user__nav-icon" name="help-circle"></ion-icon>
+                            <svg class="user__nav-icon">
+                                <use xlink:href="assets/sprite.svg#icon-help">
+                                </use>
+                            </svg>
                             <span class="user__nav--help-text">Need help?</span>
                         </div>
-                        <ion-icon class="user__nav-icon" name="settings-outline"></ion-icon>
+                        <svg class="user__nav-icon">
+                            <use xlink:href="assets/sprite.svg#icon-settings">
+                            </use>
+                        </svg>
                         <img src="assets/genius_pic.jpg" alt="User Photo" class="user__nav-img">
                     </nav>
                 </header>
                 <main class="main container-fluid p-4 ">
                     <div class="main__header mb-3">
                         <h1 class="heading-1">
-                            <span class="text-color-grey">welcome,</span> hakeem
+                            <span class="text-grey">welcome,</span> hakeem
                             <svg class="main__header-icon">
                                 <use xlink:href="assets/twemoji_waving-hand.svg#twemoji:waving-hand"></use>
                             </svg>
                         </h1>
                     </div>
                     <div class="container-fluid p-0 m-0 d-flex gap-5">
-                        <div class="main__content flex-grow-1">
+                        <div class="main__content d-flex flex-column row-gap-4 flex-grow-1">
                             <div
-                                class="balance d-flex flex-column text-capitalize bg-white mb-4 ps-4 pe-5 py-5 rounded-4">
+                                class="balance d-flex flex-column row-gap-4 text-capitalize bg-white ps-4 pe-5 py-5 rounded-5">
                                 <div class="balance__header d-flex justify-content-between">
-                                    <h2 class="heading-2 text-color-grey">current balance</h2>
-                                    <div class="currence column-gap-2 bg-primary-light-1 p-2
-                                    d-flex align-items-center rounded-2">
+                                    <h2 class="heading-2 h-2 text-grey">current balance</h2>
+                                    <div class="currence column-gap-3 bg-primary-light-1 p-3
+                                    d-flex align-items-center rounded-3">
                                         <svg class="currence__country-icon">
                                             <use xlink:href="assets/twemoji_flag-nigeria.svg#twemoji:flag-nigeria">
                                             </use>
@@ -74,44 +78,48 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <p class="balance__amount">
-                                    <span class="text-primary">ngn</span> 50,0000.00
+                                <p class="balance__amount display-2 fw-bolder">
+                                    <span class="text-primary">ngn</span> 50,000.00
                                 </p>
 
                                 <div class="balance__footer d-flex justify-content-between">
                                     <div class="d-flex column-gap-3">
                                         <div
-                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-2 rounded-1">
+                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2">
                                             <div
-                                                class="balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
-                                                <svg>
-                                                    <use
-                                                        xlink:href="assets/ant-design_stock-outlined.svg#ant-design:stock-outlined">
+                                                class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/chart-line.svg#chart-line">
                                                     </use>
                                                 </svg>
                                             </div>
                                             <div class="balance__overview--details d-flex flex-column">
-                                                <span class="balance__overview--details-figure">650</span>
+                                                <span class="balance__overview--details-figure display-6">650</span>
                                                 <span
-                                                    class="balance__overview--details-type text-color-grey fw-semibold">Transactions</span>
+                                                    class="balance__overview--details-type fs-5 text-grey fw-semibold">Transactions</span>
                                             </div>
                                         </div>
                                         <div
-                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-2 rounded-1">
+                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2 ">
                                             <div
-                                                class="balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
-                                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                                class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/arrow-up-thick.svg#arrow-up">
+                                                    </use>
+                                                </svg>
+                                                <!-- <ion-icon name="arrow-up-outline"></ion-icon> -->
 
                                             </div>
                                             <div class="balance__overview--details d-flex flex-column">
-                                                <span class="balance__overview--details-figure">2</span>
+                                                <span class="balance__overview--details-figure display-6">2</span>
                                                 <span
-                                                    class="balance__overview--details-type text-color-grey fw-semibold">accounts</span>
+                                                    class="balance__overview--details-type fs-5 text-grey fw-semibold">accounts</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="balance__wallet text-color-grey align-self-end p-0 m-0">
-                                        <span class="fw-bold">wallet ballance</span>
+                                    <p
+                                        class="balance__wallet d-flex column-gap-3 align-items-center text-grey align-self-end p-0 m-0">
+                                        <span class="fw-semibold fs-5">wallet ballance</span>
                                         <svg>
                                             <use
                                                 xlink:href="assets/ic_sharp-remove-red-eye.svg#ic:sharp-remove-red-eye">
@@ -120,34 +128,42 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="cta mb-4">
+                            <div class="cta">
                                 <h2 class="heading-2">quick action</h2>
-                                <div class="cta__btns d-flex column-gap-3">
-                                    <button class="btn cta__btn btn-primary w-50 p-4 rounded-4 column-gap-3"
+                                <div class="cta__btns d-flex column-gap-3 fs-2">
+                                    <button class="btn cta__btn btn-primary w-50 p-4 text-white rounded-4 column-gap-3 "
                                         type="button">
-                                        <ion-icon name="paper-plane"></ion-icon>
+                                        <svg>
+                                            <use xlink:href="assets/paper-plane.svg#paper-plane">
+                                            </use>
+                                        </svg>
+                                        <!-- <ion-icon name="paper-plane"></ion-icon> -->
                                         <span>send
                                             money</span></button>
                                     <button
                                         class="btn cta__btn cta__btn-fund btn-primary w-50 p-4 rounded-4 column-gap-3 bg-primary-light-1"
                                         type="button">
-                                        <ion-icon name="add-circle"></ion-icon>
+                                        <svg>
+                                            <use xlink:href="assets/plus-circle.svg#plus-circle">
+                                            </use>
+                                        </svg>
+                                        <!-- <ion-icon name="add-circle"></ion-icon> -->
                                         <span>fund
                                             wallet</span></button>
                                 </div>
                             </div>
 
-                            <div class="convert__funds text-capitalize mb-4 fw-bold fs-5">
+                            <div class="convert__funds text-capitalize fw-bold">
                                 <h2 class="heading-2">conver funds</h2>
                                 <div
-                                    class="convert__fund--details p-4 d-flex column-gap-2 bg-white rounded-4 justify-content-between">
+                                    class="convert__fund--details p-4 d-flex column-gap-2 bg-white fs-4 rounded-5 justify-content-between">
                                     <div class="convert__funds--info col-5" style="width: 45%;">
                                         <p class="mb-4">send</p>
                                         <div
                                             class="convert__funds--amount d-flex justify-content-between border border-light-subtle rounded-3 p-3 mb-4 w-100">
-                                            <span class="fs-2">1,000</span>
+                                            <span class="display-6 fw-bold">1,000</span>
                                             <div
-                                                class="currence column-gap-2 bg-primary-light-1 p-2 d-flex align-items-center rounded-2">
+                                                class="currence column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
                                                 <svg class="currence__country-icon">
                                                     <use
                                                         xlink:href="assets/twemoji_flag-us-outlying-islands.svg#twemoji:flag-us-outlying-islands">
@@ -172,9 +188,9 @@
                                         <p class="mb-4">recipient receives</p>
                                         <div
                                             class="convert__funds--amount d-flex justify-content-between border rounded-4 p-3 mb-3 w-100">
-                                            <span class="fs-2">724,000</span>
+                                            <span class="display-6 fw-bold">724,000</span>
                                             <div
-                                                class="currence column-gap-2 bg-primary-light-1 p-2 d-flex align-items-center rounded-2">
+                                                class="currence column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
                                                 <svg class="currence__country-icon">
                                                     <use
                                                         xlink:href="assets/twemoji_flag-nigeria.svg#twemoji:flag-nigeria">
@@ -188,18 +204,18 @@
                                             </div>
                                         </div>
                                         <button type="button"
-                                            class="btn btn-primary btn-lg px-5 py-3 fs-5 rounded-2 fw-bold align-self-end">Continue</button>
+                                            class="btn btn-primary btn-lg px-5 py-3 fs-4 rounded-2 fw-bold align-self-end">Continue</button>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="notifications">
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h2 class="heading-2 m-0">notification</h2>
-                                    <div class="d-flex align-items-center gap-5 text-capitalize fw-bolder">
+                                    <div class="d-flex align-items-center gap-5 fs-5 text-capitalize fw-bolder">
                                         <span>see all</span>
                                         <div
-                                            class="currence column-gap-2 bg-primary-light-1 p-2 d-flex align-items-center rounded-2">
+                                            class="tag column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
 
                                             <span>daily update</span>
                                             <svg class="currence__toggle-icon">
@@ -210,17 +226,18 @@
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column bg-white gap-5 p-5">
-                                    <div class="d-flex gap-4">
-                                        <div class="bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center"
-                                            style="width:3.75rem; height: 3.75rem;">
-                                            <svg style="width:2.2rem; height: 2.2rem; fill: var(--color-grey-dark-2)">
+                                    <div class="d-flex gap-5">
+                                        <div
+                                            class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
+                                            <svg class="icon-sm text-grey">
                                                 <use xlink:href="assets/Vector.svg#vector"></use>
                                             </svg>
                                         </div>
                                         <div class="">
-                                            <h2 class="heading-2">you sent <span class="text-danger">$200</span> to
-                                                taiwo ogundeyi</h2>
-                                            <span class="text-color-grey fw-bold">now</span>
+                                            <h3 class="h-3 mb-3 fw-bold">You sent <span class="text-decline">$200</span>
+                                                to
+                                                Taiwo Ogundeyi</h3>
+                                            <span class="text-grey fw-bold">now</span>
                                         </div>
                                         <div class="ms-auto gap-3">
                                             <svg class="icon-sm">
@@ -232,17 +249,19 @@
                                         </div>
                                     </div>
 
-                                    <div class="d-flex gap-4">
-                                        <div class="bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center"
-                                            style="width:3.75rem; height: 3.75rem;">
-                                            <svg style="width:2.2rem; height: 2.2rem; fill: var(--color-grey-dark-2)">
+                                    <div class="d-flex gap-5">
+                                        <div
+                                            class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
+                                            <svg class="icon-sm text-grey">
                                                 <use xlink:href="assets/Vector.svg#vector"></use>
                                             </svg>
                                         </div>
                                         <div class="">
-                                            <h2 class="heading-2">you received <span class="text-success">$200</span> to
-                                                kehinde ogundeyi</h2>
-                                            <span class="text-color-grey fw-bold">now</span>
+                                            <h3 class="h-3 mb-3 fw-bold">You received <span
+                                                    class="text-complete">$200</span>
+                                                to
+                                                Kehinde Ogundeyi</h3>
+                                            <span class="text-grey fw-bold">now</span>
                                         </div>
                                         <div class="ms-auto gap-3">
                                             <svg class="icon-sm">
@@ -285,18 +304,18 @@
                             </div>
                             <div class="transactions bg-white py-5 px-4 rounded-4">
                                 <div
-                                    class="transactions__header d-flex justify-content-between align-items-center mb-3">
+                                    class="transactions__header d-flex justify-content-between align-items-center mb-5">
                                     <h2 class="heading-2 m-0">transactions</h2>
                                     <div class="d-flex align-items-center gap-5 text-capitalize fw-bolder fs-5">
                                         <span class="text-primary">all</span>
-                                        <span class="text-color-grey">send</span>
-                                        <span class="text-color-grey">recent</span>
+                                        <span class="text-grey">send</span>
+                                        <span class="text-grey">recent</span>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column row-gap-3 fw-bold">
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$1,500</span>
                                         </div>
@@ -305,9 +324,9 @@
                                             <span class="transactions__status text-complete">Completed</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$2,500</span>
                                         </div>
@@ -316,9 +335,9 @@
                                             <span class="transactions__status text-pending">Pending</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$2,500</span>
                                         </div>
@@ -327,9 +346,9 @@
                                             <span class="transactions__status text-complete">Completed</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$1,500</span>
                                         </div>
@@ -338,9 +357,9 @@
                                             <span class="transactions__status text-complete">Completed</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$2,500</span>
                                         </div>
@@ -349,9 +368,9 @@
                                             <span class="transactions__status text-decline">Decline</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$1,500</span>
                                         </div>
@@ -360,9 +379,9 @@
                                             <span class="transactions__status text-complete">Completed</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-4 py-4 px-5 bg-primary-light-2">
+                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
                                         <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-color-grey">16:23, 12dec
+                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
                                                 2022</span>
                                             <span class="transactions__amount fs-5">$1,500</span>
                                         </div>
@@ -378,66 +397,75 @@
                 </main>
             </div>
             <aside class="sidebar  flex-column order-1">
-                <div class="website__logo d-flex align-items-center justify-content-center">
+                <div class="website__logo d-flex align-items-center">
                     <img src="assets/Azapay ICON 03 1.png" alt="Azapay logo" class="website__logo--img">
                     <span class="website__logo--text">azapay</span>
                 </div>
 
-                <ul class="side-nav p-0">
+                <ul class="side-nav p-0 fs-4">
                     <li class="side-nav__item side-nav__item--active">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="grid-outline"></ion-icon>
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-grid_view"></use>
+                            </svg>
                             <span>overview</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-
-                            <ion-icon class="side-nav__icon" name="wallet-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-wallet"></use>
+                            </svg>
                             <span>wallets</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="swap-horizontal-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-swap_horiz"></use>
+                            </svg>
                             <span>convert</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="card-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-credit-card"></use>
+                            </svg>
                             <span>cards & receipients</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="reader-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-library_books"></use>
+                            </svg>
                             <span>transactions</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="cart-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-add_shopping_cart"></use>
+                            </svg>
                             <span>checkout for me</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
                             <span class="side-nav__notif-icon">
-                                <ion-icon class="side-nav__icon" name="notifications-outline"></ion-icon>
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                                </svg>
                             </span>
                             <span>notification</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
-                            <ion-icon class="side-nav__icon" name="log-out-outline"></ion-icon>
-
+                            <svg class="side-nav__icon">
+                                <use xlink:href="assets/sprite.svg#icon-logout"></use>
+                            </svg>
                             <span>logout</span>
                         </a>
                     </li>

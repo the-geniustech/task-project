@@ -1,4 +1,4 @@
-node_modules
+.vscode
 style.comp.css
 style.prefix.css
-.vscode
+node_modules

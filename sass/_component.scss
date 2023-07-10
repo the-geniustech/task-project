@@ -15,7 +15,7 @@
         padding: 0.7rem 2rem;
         border-radius: 100px;
         width: 100%;
-        margin-right: -3.5rem;
+        margin-right: -4.5rem;
 
         &::placeholder {
             color: inherit;
@@ -44,7 +44,7 @@
     &__icon {
         height: 2rem;
         width: 2rem;
-        color: var(--color-grey-dark-2);
+        fill: var(--color-grey-dark-2);
     }
 }
 
@@ -71,7 +71,9 @@
     }
 
     &-icon {
-        font-size: 2.8rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &-img {
@@ -86,15 +88,6 @@
 
 ////////////////////////////////////////
 // MAIN HEADER
-
-.heading-1 {
-    font-size: 2.4rem;
-}
-
-.heading-2 {
-    font-size: 1.5rem;
-}
-
 .heading-1,
 .heading-2 {
     font-weight: 700;
@@ -126,35 +119,19 @@
     box-shadow: var(--box-shadow);
 
     &__amount {
-        font-size: 4rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -1px;
     }
 
     &__overview {
-        width: 14rem;
-        height: 7rem;
-
-        &-icon-box {
-            width: 3.75rem;
-            height: 3.75rem;
-
-            & svg {
-                width: 2.8rem;
-                height: 2.8rem;
-            }
-
-            & ion-icon {
-                width: 2.2rem;
-                height: 2.2rem;
-            }
-        }
+        width: 20rem;
+        height: 10rem;
 
         &--details {
 
             &-figure {
-                font-size: 2rem;
+                // font-size: 2rem;
                 font-weight: 700;
                 letter-spacing: -1px;
             }
@@ -210,29 +187,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.8rem;
 
         &-fund {
             border: none;
-            color: var(--color-grey-dark-1);
+            color: #000;
             opacity: .9;
             transition: all .2s;
         }
 
         &-fund:hover {
-            color: var(--color-grey-dark-1);
             background-color: #cfd2da;
-
+            color: #000;
         }
 
         & span {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: capitalize;
         }
 
-        & ion-icon {
-            width: 2rem;
-            height: 2rem;
+        & svg {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+
+        &:not(:last-child) svg {
+            fill: #fff;
         }
     }
 }
@@ -244,13 +224,14 @@
 
 .website__logo {
     margin-top: 2rem;
+    margin-left: 4vw;
 
     &--img {
         height: 3.75rem;
     }
 
     &--text {
-        font-size: 2.4rem;
+        font-size: 3.2rem;
         font-family: 'Belanosima', sans-serif;
         font-weight: 500;
         letter-spacing: -1px;
@@ -262,7 +243,6 @@
 // SIDE NAVIGATION
 
 .side-nav {
-    font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-grey-dark-2);
     list-style: none;
@@ -291,6 +271,11 @@
 
     }
 
+    &__item:hover &__icon,
+    &__item--active &__icon {
+        fill: var(--color-grey-dark-1);
+    }
+
     &__link:link,
     &__link:visited {
         color: inherit;
@@ -300,22 +285,24 @@
         padding: .8rem;
         position: relative;
         z-index: 10;
+        margin-left: 3vw;
 
         display: flex;
         align-items: center;
     }
 
     &__icon {
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
         margin-right: 2rem;
+        fill: var(--color-grey-dark-2);
     }
 
-    &__icon[name="notifications-outline"] {
+    &__notif-icon svg {
         position: relative;
     }
 
-    &__icon[name="notifications-outline"]::after {
+    &__notif-icon svg::after {
         content: "";
         display: inline-block;
         width: .84rem;

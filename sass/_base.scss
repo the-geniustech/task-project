@@ -21,7 +21,7 @@
     }
 }
 
-.text-color-grey {
+.text-grey {
     color: var(--color-grey-dark-2);
     fill: var(--color-grey-dark-2);
 }
@@ -65,6 +65,11 @@
     height: 3.5rem;
 }
 
+.icon-box {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
 .sudo-el-position {
     content: "";
     display: block;
@@ -83,7 +88,7 @@
 
 
 html {
-    font-size: 62.5%;
+    font-size: 68.75%;
 }
 
 body {
@@ -93,8 +98,7 @@ body {
     background-color: var(--color-grey-light-1);
     color: var(--color-grey-dark-1);
     width: 144rem;
-    height: 102rem;
-
+    height: 102.4rem;
 
 }
 
