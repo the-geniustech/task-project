@@ -1,6 +1,5 @@
 //////////////////////////////
 // SEARCH
-
 .search {
     flex: 0 0 40%;
 
@@ -9,7 +8,6 @@
         font-size: inherit;
         // color: var(--color-grey-dark-2);
         color: inherit;
-
         background-color: var(--color-grey-light-2);
         border: none;
         padding: 0.7rem 2rem;
@@ -48,13 +46,15 @@
     }
 }
 
-
-
 //////////////////////////////
 // USER NAVIGATION
 .user__nav {
-    margin-right: 9.6rem;
+    margin-right: 8%;
     gap: 3.2rem;
+
+    &--search {
+        display: none;
+    }
 
     &--help {
         gap: 1rem;
@@ -85,7 +85,6 @@
     }
 }
 
-
 ////////////////////////////////////////
 // MAIN HEADER
 .heading-1,
@@ -97,22 +96,14 @@
 
 .main__header {
     &-icon {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 32px;
+        height: 32px;
     }
 }
 
-
 ////////////////////////////////////////
 // MAIN CONTENT
-
 // .main__content {}
-
-.main__side {
-    flex: 0 0 395px;
-}
-
-
 ////////////////////////////////////////
 // BALANCE
 .balance {
@@ -125,11 +116,10 @@
     }
 
     &__overview {
-        width: 20rem;
-        height: 10rem;
 
+        // width: 20rem;
+        // height: 10rem;
         &--details {
-
             &-figure {
                 // font-size: 2rem;
                 font-weight: 700;
@@ -143,6 +133,8 @@
     }
 
     &__wallet {
+        min-width: 12.1rem;
+
         & span {
             font-size: 1.2rem;
             font-weight: 500;
@@ -150,19 +142,18 @@
 
         & svg {
             fill: var(--color-grey-dark-2);
-            width: 2rem;
-            height: 2rem;
+            width: 20px;
+            height: 20px;
         }
     }
-
 }
 
 .currence {
-
+    position: relative;
 
     &__country-icon {
-        width: 2rem;
-        height: 2rem;
+        width: 20px;
+        height: 20px;
     }
 
     &__sign {
@@ -175,14 +166,39 @@
         width: 1.6rem;
         height: 1.6rem;
     }
+
+    &__lists {
+        width: 100%;
+        // height: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        &-list {
+            display: inline-block;
+            width: 100%;
+            background: none;
+            border: none;
+            @extend .currence__sign;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba($color: #000000, $alpha: .02);
+            }
+
+            &:hover {
+                background: rgba($color: #000000, $alpha: .02);
+            }
+        }
+    }
 }
 
-
+.tag__lists--hidden .currence__lists {
+    display: none;
+}
 
 ////////////////////////////////////////
 // CALL TO ACTION
 .cta {
-
     &__btn {
         display: flex;
         align-items: center;
@@ -196,9 +212,10 @@
             transition: all .2s;
         }
 
-        &-fund:hover {
-            background-color: #cfd2da;
-            color: #000;
+        &-fund:hover,
+        &-fund:active {
+            background-color: #cfd2da !important;
+            color: #000 !important;
         }
 
         & span {
@@ -207,25 +224,35 @@
         }
 
         & svg {
-            width: 2.8rem;
-            height: 2.8rem;
+            width: 28px;
+            height: 28px;
         }
 
         &:not(:last-child) svg {
             fill: #fff;
         }
+
+        // &:last-child:active {}
     }
 }
 
+////////////////////////////////////////
+// CONVERT FUND
+.convert__fund {
+    &--data {
+        width: 45%;
+    }
 
+    &--icon {
+        width: 10%;
+        height: fit-content;
+        transform: translateY(5rem);
+    }
+}
 
 ////////////////////////////////////////
 // WEBSITE LOGO
-
 .website__logo {
-    margin-top: 2rem;
-    margin-left: 4vw;
-
     &--img {
         height: 3.75rem;
     }
@@ -238,11 +265,9 @@
     }
 }
 
-
 ////////////////////////////////////////
 // SIDE NAVIGATION
-
-.side-nav {
+.sidebar-nav {
     font-weight: 700;
     color: var(--color-grey-dark-2);
     list-style: none;
@@ -252,10 +277,12 @@
         padding-left: 1.6rem;
         transition: all .1s;
 
+        &--hide {
+            display: none;
+        }
+
         &:not(:last-child) {
             margin-bottom: .5rem;
-
-
         }
 
         &--active {
@@ -268,7 +295,6 @@
             background-color: #ccd3e6;
             color: var(--color-grey-dark-1);
         }
-
     }
 
     &__item:hover &__icon,
@@ -285,8 +311,7 @@
         padding: .8rem;
         position: relative;
         z-index: 10;
-        margin-left: 3vw;
-
+        margin-left: 1.6vw;
         display: flex;
         align-items: center;
     }
@@ -297,7 +322,6 @@
         margin-right: 2rem;
         fill: var(--color-grey-dark-2);
     }
-
 }
 
 .notification__icon-box {

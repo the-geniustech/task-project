@@ -1,0 +1,272 @@
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600px:      Phone
+600 - 990px:    Tablet portrait
+990 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone-vsm {
+    @media only screen and (max-width: 18.75em) {
+      @content
+    }
+
+    ; //300px
+  }
+
+  @if $breakpoint==phone-sm {
+    @media only screen and (max-width: 25em) {
+      @content
+    }
+
+    ; //400px
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }
+
+    ; //600px
+  }
+
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 61.87em) {
+      @content
+    }
+
+    ; //990px
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }
+
+    ; //1200px
+  }
+
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }
+
+    ; //1800
+  }
+}
+
+////////////////////////////////
+html {
+  @include respond(phone-sm) {
+    font-size: 50% !important;
+  }
+}
+
+.header {
+  @include respond(tab-land) {
+    padding-left: 0.8rem !important;
+    z-index: 33 !important;
+  }
+
+  &__website--logo {
+    @include respond(tab-land) {
+      display: flex !important;
+    }
+
+    &-text {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__nav--toggle {
+    @include respond(tab-land) {
+      display: flex !important;
+    }
+  }
+}
+
+.search {
+  @include respond(tab-port) {
+    width: 100vw;
+    padding: 1.2rem 3rem 1.2rem 1.2rem;
+    align-self: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .1);
+  }
+
+  &__box--open {
+    @include respond(tab-port) {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+}
+
+.user__nav {
+  @include respond(tab-land) {
+    margin-right: 3% !important;
+    gap: 2rem !important;
+  }
+
+  @include respond(tab-port) {
+    gap: 1rem !important;
+  }
+
+  &--search {
+    @include respond(tab-port) {
+      display: block !important;
+    }
+  }
+}
+
+.dashboard {
+  @include respond(tab-land) {
+    padding-left: 1.5rem !important;
+  }
+
+  @include respond(phone) {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+  }
+
+  &__content {
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+}
+
+.balance__details {
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.cta {
+  &__btns {
+    @include respond(phone-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    @include respond(phone-sm) {
+      width: 100% !important;
+    }
+  }
+}
+
+.convert__fund {
+  &--details {
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &--data,
+  &--icon {
+    @include respond(phone) {
+      width: 100% !important;
+    }
+  }
+
+  &--icon {
+    @include respond(phone) {
+      margin-top: 1.5rem !important;
+      height: auto !important;
+      transform: translateY(0) !important;
+    }
+  }
+}
+
+.credit__card {
+  @include respond(phone) {
+    width: 35rem !important;
+    height: 17.5rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  @include respond(phone-sm) {
+    width: 28rem !important;
+    height: 16.5rem !important;
+  }
+
+  &--name {
+    @include respond(phone-sm) {
+      margin-bottom: .1rem !important;
+    }
+  }
+
+  &::after {
+    @include respond(phone-sm) {
+      top: 5% !important;
+      left: -50% !important;
+    }
+  }
+
+  &::before {
+    @include respond(phone-sm) {
+      top: 40% !important;
+      left: -35% !important;
+    }
+  }
+}
+
+.icon-chip {
+  @include respond(phone-sm) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.sidebar {
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  @include respond(phone) {
+    min-width: 22rem !important;
+  }
+
+  &--open {
+    @include respond(tab-land) {
+      display: block;
+      top: 6rem;
+    }
+  }
+
+  &__website--logo {
+    @include respond(tab-land) {
+      display: none !important;
+    }
+  }
+
+  &-nav {
+    @include respond(tab-land) {
+      margin-top: 0 !important;
+    }
+  }
+}

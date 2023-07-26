@@ -2,16 +2,12 @@
     --color-primary: #5865F2;
     --color-primary-light: #1FAEFF;
     --color-primary-dark: #002481;
-
     --color-grey-light-1: #F7F7F7;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
     --color-grey-light-4: #ccc;
-
-
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #868e96;
-
     --ml-sm: 1.6rem;
     --ml-md: 3.2rem;
     --ml-lg: 4.8rem;
@@ -51,18 +47,14 @@
 }
 
 .icon-sm {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 22px;
+    height: 22px;
+    transform: scale(.8);
 }
 
 .icon-md {
-    width: 3.5rem;
-    height: 4.5rem;
-}
-
-.icon-bg {
-    width: 4.5rem;
-    height: 3.5rem;
+    width: 35px;
+    height: 45px;
 }
 
 .icon-box {
@@ -78,17 +70,17 @@
     height: 20rem;
     width: 20rem;
     background-color: transparent;
-
 }
 
 .icon-chip {
+    width: 46px;
+    height: 34px;
+    margin-bottom: 1rem;
     background: linear-gradient(to right bottom, #daaa00, #e0ba3c, #e6c961, #edd882, #f4e6a3, #f6e9a4, #f8eba5, #faeea6, #f7e687, #f4dd67, #f2d442, #f0ca00);
 }
 
-
-
 html {
-    font-size: 68.75%;
+    font-size: 62.5%;
 }
 
 body {
@@ -96,20 +88,24 @@ body {
     font-weight: 400;
     letter-spacing: -.8px;
     background-color: var(--color-grey-light-1);
-    color: var(--color-grey-dark-1);
-    width: 144rem;
-    height: 102.4rem;
+    // color: var(--color-grey-dark-1);
+    // width: 1440px;
+    // height: 1024px;
+}
 
+input::placeholder {
+    color: #000;
 }
 
 body>div {
+    width: 100%;
     height: 100%;
 }
 
 .credit__card {
     position: relative;
-    width: 100%;
-    height: 20rem;
+    width: 395px;
+    height: 200px;
     background: linear-gradient(to left, #002481, #0046a3, #0068c4, #008ae2, #1faeff);
     overflow: hidden;
     z-index: -3;
@@ -141,7 +137,6 @@ body>div {
             top: 100%;
             left: 0;
         }
-
     }
 
     &--expire-text {

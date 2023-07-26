@@ -1,480 +1,671 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        </meta>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Inter:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </meta>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="assets/Azapay ICON 03 1.png" type="image/png">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Inter:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet">
+        </link>
 
-    <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+        </link>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        </link>
 
-    <title>Azapay</title>
-</head>
+        <link rel="shortcut icon" href="assets/Azapay ICON 03 1.png" type="image/png">
+        </link>
 
-<div>
+        <link rel="stylesheet" href="css/style.css">
+        </link>
 
-    <body>
-        <div class="d-flex h-100">
-            <div class="container-fluid m-0 p-0 flex-grow-1 order-2">
-                <header class="header d-flex justify-content-between align-items-center">
-                    <form action="#" class="search d-flex align-items-center justify-content-center">
-                        <input type="text" class="search__input" placeholder="Search">
-                        <button class="search__btn d-flex align-items-center justify-content-center">
-                            <svg class="search__icon">
-                                <use xlink:href="assets/sprite.svg#icon-search">
-                                </use>
-                            </svg>
-                        </button>
-                    </form>
+        <script defer="defer" src="js/script.js"></script>
 
-                    <nav class="user__nav d-flex justify-content-center align-items-center">
-                        <div class="user__nav--help d-flex align-items-center">
-                            <svg class="user__nav-icon">
-                                <use xlink:href="assets/sprite.svg#icon-help">
-                                </use>
-                            </svg>
-                            <span class="user__nav--help-text">Need help?</span>
+        <title>Azapay</title>
+    </head>
+
+    <div>
+
+        <body>
+            <div class="d-flex h-100 mw-100">
+                <div class="main-container flex-grow-1 order-2">
+                    <header class="header mw-100 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="website__logo header__website--logo align-items-center">
+                                <img src="assets/Azapay ICON 03 1.png" alt="Azapay logo" class="website__logo--img">
+
+                                <span class="website__logo--text header__website--logo-text">azapay</span>
+                            </div>
+
+                            <div class="header__nav--toggle nav__toggle">
+                                <input type="checkbox" class="navigation__checkbox" id="navi-tonggle"></input>
+
+                                <label for="navi-toggle"
+                                    class="navigation__button bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
+                                    <span class="navigation__icon">&nbsp;</span>
+                                </label>
+                            </div>
                         </div>
-                        <svg class="user__nav-icon">
-                            <use xlink:href="assets/sprite.svg#icon-settings">
-                            </use>
-                        </svg>
-                        <img src="assets/genius_pic.jpg" alt="User Photo" class="user__nav-img">
-                    </nav>
-                </header>
-                <main class="main container-fluid p-4 ">
-                    <div class="main__header mb-3">
-                        <h1 class="heading-1">
-                            <span class="text-grey">welcome,</span> hakeem
-                            <svg class="main__header-icon">
-                                <use xlink:href="assets/twemoji_waving-hand.svg#twemoji:waving-hand"></use>
+
+                        <form action="#" class="search bg-white d-flex align-items-center justify-content-center">
+                            <input type="text" class="search__input" placeholder="Search"></input>
+
+                            <button class="search__btn d-flex align-items-center justify-content-center">
+                                <svg class="search__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-search"></use>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <nav class="user__nav d-flex justify-content-center align-items-center">
+                            <button class="user__nav--search border-0 bg-white">
+                                <svg class="user__nav-icon">
+                                    <use xlink:href="assets/sprite.svg#icon-search"></use>
+                                </svg>
+                            </button>
+
+                            <div class="user__nav--help d-flex align-items-center">
+                                <svg class="user__nav-icon">
+                                    <use xlink:href="assets/sprite.svg#icon-help"></use>
+                                </svg>
+
+                                <span class="user__nav--help-text">Need help?</span>
+                            </div>
+
+                            <svg class="user__nav-icon">
+                                <use xlink:href="assets/sprite.svg#icon-settings"></use>
                             </svg>
-                        </h1>
-                    </div>
-                    <div class="container-fluid p-0 m-0 d-flex gap-5">
-                        <div class="main__content d-flex flex-column row-gap-4 flex-grow-1">
-                            <div
-                                class="balance d-flex flex-column row-gap-4 text-capitalize bg-white ps-4 pe-5 py-5 rounded-5">
-                                <div class="balance__header d-flex justify-content-between">
-                                    <h2 class="heading-2 h-2 text-grey">current balance</h2>
-                                    <div class="currence column-gap-3 bg-primary-light-1 p-3
-                                    d-flex align-items-center rounded-3">
-                                        <svg class="currence__country-icon">
-                                            <use xlink:href="assets/twemoji_flag-nigeria.svg#twemoji:flag-nigeria">
-                                            </use>
-                                        </svg>
-                                        <span class="currence__sign">ngn</span>
-                                        <svg class="currence__toggle-icon">
-                                            <use xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
-                                            </use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="balance__amount display-2 fw-bolder">
-                                    <span class="text-primary">ngn</span> 50,000.00
-                                </p>
 
-                                <div class="balance__footer d-flex justify-content-between">
-                                    <div class="d-flex column-gap-3">
-                                        <div
-                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2">
-                                            <div
-                                                class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
-                                                <svg class="icon-sm">
-                                                    <use xlink:href="assets/chart-line.svg#chart-line">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <div class="balance__overview--details d-flex flex-column">
-                                                <span class="balance__overview--details-figure display-6">650</span>
-                                                <span
-                                                    class="balance__overview--details-type fs-5 text-grey fw-semibold">Transactions</span>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="balance__overview d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2 ">
-                                            <div
-                                                class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
-                                                <svg class="icon-sm">
-                                                    <use xlink:href="assets/arrow-up-thick.svg#arrow-up">
-                                                    </use>
-                                                </svg>
-                                                <!-- <ion-icon name="arrow-up-outline"></ion-icon> -->
+                            <img src="assets/genius_pic.jpg" alt="User Photo" class="user__nav-img">
+                        </nav>
+                    </header>
 
-                                            </div>
-                                            <div class="balance__overview--details d-flex flex-column">
-                                                <span class="balance__overview--details-figure display-6">2</span>
-                                                <span
-                                                    class="balance__overview--details-type fs-5 text-grey fw-semibold">accounts</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p
-                                        class="balance__wallet d-flex column-gap-3 align-items-center text-grey align-self-end p-0 m-0">
-                                        <span class="fw-semibold fs-5">wallet ballance</span>
-                                        <svg>
-                                            <use
-                                                xlink:href="assets/ic_sharp-remove-red-eye.svg#ic:sharp-remove-red-eye">
-                                            </use>
-                                        </svg>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="cta">
-                                <h2 class="heading-2">quick action</h2>
-                                <div class="cta__btns d-flex column-gap-3 fs-2">
-                                    <button class="btn cta__btn btn-primary w-50 p-4 text-white rounded-4 column-gap-3 "
-                                        type="button">
-                                        <svg>
-                                            <use xlink:href="assets/paper-plane.svg#paper-plane">
-                                            </use>
-                                        </svg>
-                                        <!-- <ion-icon name="paper-plane"></ion-icon> -->
-                                        <span>send
-                                            money</span></button>
-                                    <button
-                                        class="btn cta__btn cta__btn-fund btn-primary w-50 p-4 rounded-4 column-gap-3 bg-primary-light-1"
-                                        type="button">
-                                        <svg>
-                                            <use xlink:href="assets/plus-circle.svg#plus-circle">
-                                            </use>
-                                        </svg>
-                                        <!-- <ion-icon name="add-circle"></ion-icon> -->
-                                        <span>fund
-                                            wallet</span></button>
-                                </div>
-                            </div>
+                    <main class="dashboard container-fluid">
+                        <div class="main__header mb-3">
+                            <h1 class="heading-1">
+                                <span class="text-grey">welcome,</span> hakeem
 
-                            <div class="convert__funds text-capitalize fw-bold">
-                                <h2 class="heading-2">conver funds</h2>
+                                <svg class="main__header-icon">
+                                    <use xlink:href="assets/twemoji_waving-hand.svg#twemoji:waving-hand"></use>
+                                </svg>
+                            </h1>
+                        </div>
+
+                        <div class="dashboard__content container-fluid p-0 m-0 d-flex gap-4">
+                            <div class="dashboard__content--main d-flex flex-column row-gap-4 flex-grow-1">
                                 <div
-                                    class="convert__fund--details p-4 d-flex column-gap-2 bg-white fs-4 rounded-5 justify-content-between">
-                                    <div class="convert__funds--info col-5" style="width: 45%;">
-                                        <p class="mb-4">send</p>
-                                        <div
-                                            class="convert__funds--amount d-flex justify-content-between border border-light-subtle rounded-3 p-3 mb-4 w-100">
-                                            <span class="display-6 fw-bold">1,000</span>
-                                            <div
-                                                class="currence column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
+                                    class="balance d-flex flex-column row-gap-4 text-capitalize bg-white ps-4 pe-5 py-5 rounded-5">
+                                    <div class="balance__header d-flex justify-content-between">
+                                        <h2 class="heading-2 h-2 text-grey">current balance</h2>
+
+                                        <div id="tag-1" class="tag currence tag__lists--hidden">
+                                            <div data-tag="1" class="currence__toggle column-gap-3 bg-primary-light-1 p-3
+                                    d-flex align-items-center rounded-3">
                                                 <svg class="currence__country-icon">
-                                                    <use
-                                                        xlink:href="assets/twemoji_flag-us-outlying-islands.svg#twemoji:flag-us-outlying-islands">
-                                                    </use>
+                                                    <use xlink:href="assets/flag-nigeria.svg#flag-nigeria"></use>
                                                 </svg>
-                                                <span class="currence__sign">usd</span>
+                                                <span class="currence__sign currence__sign-balance">ngn</span>
                                                 <svg class="currence__toggle-icon">
                                                     <use xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
                                                     </use>
                                                 </svg>
                                             </div>
-                                        </div>
-                                        <p class="text-uppercase">1 usd = n 72</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center" style="width: 10%;">
-                                        <svg class="icon-md">
-                                            <use xlink:href="assets/simple-icons_convertio.svg#vector">
-                                            </use>
-                                        </svg>
-                                    </div>
-                                    <div class="convert__funds--received col-5 d-flex flex-column" style="width: 45%;">
-                                        <p class="mb-4">recipient receives</p>
-                                        <div
-                                            class="convert__funds--amount d-flex justify-content-between border rounded-4 p-3 mb-3 w-100">
-                                            <span class="display-6 fw-bold">724,000</span>
-                                            <div
-                                                class="currence column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
-                                                <svg class="currence__country-icon">
-                                                    <use
-                                                        xlink:href="assets/twemoji_flag-nigeria.svg#twemoji:flag-nigeria">
-                                                    </use>
-                                                </svg>
-                                                <span class="currence__sign">ngn</span>
-                                                <svg class="currence__toggle-icon">
-                                                    <use xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
-                                                    </use>
-                                                </svg>
+
+                                            <div class="currence__lists bg-white shadow-sm rounded-3">
+                                                <button value="usd" class="currence__lists-list">usd</button>
+
+                                                <button value="ngn" class="currence__lists-list">ngn</button>
                                             </div>
                                         </div>
-                                        <button type="button"
-                                            class="btn btn-primary btn-lg px-5 py-3 fs-4 rounded-2 fw-bold align-self-end">Continue</button>
                                     </div>
 
-                                </div>
-                            </div>
-                            <div class="notifications">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h2 class="heading-2 m-0">notification</h2>
-                                    <div class="d-flex align-items-center gap-5 fs-5 text-capitalize fw-bolder">
-                                        <span>see all</span>
-                                        <div
-                                            class="tag column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
+                                    <p class="balance__amount display-2 fw-bolder">
+                                        <span class="balance__amount--currence-sign text-primary">ngn</span>
 
-                                            <span>daily update</span>
-                                            <svg class="currence__toggle-icon">
-                                                <use xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
+                                        <span class="balance__amount--figure">50,000.00</span>
+                                    </p>
+
+                                    <div class="balance__footer d-flex column-gap-3 justify-content-between">
+                                        <div class="balance__details d-flex w-75 gap-3">
+                                            <div
+                                                class="balance__overview flex-grow-1 d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2">
+                                                <div
+                                                    class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
+                                                    <svg class="icon-sm">
+                                                        <use xlink:href="assets/chart-line.svg#chart-line"></use>
+                                                    </svg>
+                                                </div>
+
+                                                <div class="balance__overview--details d-flex flex-column">
+                                                    <span class="balance__overview--details-figure display-6">650</span>
+
+                                                    <span
+                                                        class="balance__overview--details-type fs-5 text-grey fw-semibold">Transactions</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="balance__overview flex-grow-1 d-flex align-items-center column-gap-3 bg-primary-light-2 p-3 rounded-2">
+                                                <div
+                                                    class="icon-box balance__overview-icon-box bg-primary-light-1 d-flex align-items-center justify-content-center rounded-circle">
+                                                    <svg class="icon-sm">
+                                                        <use xlink:href="assets/arrow-up-thick.svg#arrow-up"></use>
+                                                    </svg>
+                                                </div>
+
+                                                <div class="balance__overview--details d-flex flex-column">
+                                                    <span class="balance__overview--details-figure display-6">2</span>
+
+                                                    <span
+                                                        class="balance__overview--details-type fs-5 text-grey fw-semibold">accounts</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="balance__wallet d-flex column-gap-3 align-items-center text-grey align-self-end p-0 m-0">
+                                            <span class="fw-semibold fs-5">wallet ballance</span>
+
+                                            <svg>
+                                                <use
+                                                    xlink:href="assets/ic_sharp-remove-red-eye.svg#ic:sharp-remove-red-eye">
                                                 </use>
                                             </svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex flex-column bg-white gap-5 p-5">
-                                    <div class="d-flex gap-5">
-                                        <div
-                                            class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
-                                            <svg class="icon-sm text-grey">
-                                                <use xlink:href="assets/Vector.svg#vector"></use>
+
+                                <div class="cta">
+                                    <h2 class="heading-2">quick action</h2>
+
+                                    <div class="cta__btns d-flex gap-3 fs-2">
+                                        <button
+                                            class="btn cta__btn btn-primary w-50 p-4 text-white rounded-4 column-gap-3"
+                                            type="button">
+                                            <svg>
+                                                <use xlink:href="assets/paper-plane.svg#paper-plane"></use>
                                             </svg>
+
+                                            <span>
+                                                send
+                                                money
+                                            </span>
+                                        </button>
+
+                                        <button
+                                            class="btn cta__btn cta__btn-fund btn-primary w-50 p-4 rounded-4 column-gap-3 bg-primary-light-1"
+                                            type="button">
+                                            <svg>
+                                                <use xlink:href="assets/plus-circle.svg#plus-circle"></use>
+                                            </svg>
+
+                                            <span>
+                                                fund
+                                                wallet
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="convert__fund text-capitalize fw-bold">
+                                    <h2 class="heading-2">conver funds</h2>
+
+                                    <div class="d-flex flex-column gap-4 p-4 bg-white fs-4 rounded-5">
+                                        <div class="convert__fund--details d-flex gap-2 justify-content-between">
+                                            <div class="convert__fund--data convert__fund--send">
+                                                <p class="mb-4">send</p>
+
+                                                <div
+                                                    class="convert__funds--amount d-flex justify-content-between border border-light-subtle rounded-3 gap-3 p-3 w-100">
+                                                    <input type="number"
+                                                        class="w-50 focus-ring rounded-2 border-0 display-6 fw-bold"
+                                                        placeholder="1,000"></input>
+
+                                                    <div id="tag-2" class="tag currence tag__lists--hidden">
+                                                        <div data-tag="2" class="currence__toggle column-gap-3 bg-primary-light-1 p-3
+                                    d-flex align-items-center rounded-3">
+                                                            <svg class="currence__country-icon">
+                                                                <use xlink:href="assets/flag-usa.svg#flag-usa"></use>
+                                                            </svg>
+
+                                                            <span value="usd" class="currence__sign">usd</span>
+
+                                                            <svg class="currence__toggle-icon">
+                                                                <use
+                                                                    xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div class="currence__lists bg-white shadow-sm rounded-3">
+                                                            <button value="usd"
+                                                                class="currence__lists-list currence__list-dollar">usd</button>
+
+                                                            <button value="ngn"
+                                                                class="currence__lists-list currence__list--naira">ngn</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="convert__fund--icon d-flex align-items-center justify-content-center">
+                                                <svg class="icon-md">
+                                                    <use xlink:href="assets/simple-icons_convertio.svg#vector"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="convert__fund--data convert__fund--received">
+                                                <p class="mb-4">recipient receives</p>
+
+                                                <div
+                                                    class="convert__funds--amount d-flex justify-content-between border rounded-3 gap-3 p-3 mb-3 w-100">
+                                                    <input type="number"
+                                                        class="w-50 focus-ring rounded-2 border-0 display-6 fw-bold"
+                                                        placeholder="724,000"></input>
+
+                                                    <div id="tag-3" class="tag currence tag__lists--hidden">
+                                                        <div data-tag="3" class="currence__toggle column-gap-3 bg-primary-light-1 p-3
+                                    d-flex align-items-center rounded-3">
+                                                            <svg class="currence__country-icon">
+                                                                <use xlink:href="assets/flag-nigeria.svg#flag-nigeria">
+                                                                </use>
+                                                            </svg>
+
+                                                            <span class="currence__sign">ngn</span>
+
+                                                            <svg class="currence__toggle-icon">
+                                                                <use
+                                                                    xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div class="currence__lists bg-white shadow-sm rounded-3">
+                                                            <button value="usd"
+                                                                class="currence__lists-list currence__list-dollar">usd</button>
+
+                                                            <button value="ngn"
+                                                                class="currence__lists-list currence__list--naira">ngn</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="">
-                                            <h3 class="h-3 mb-3 fw-bold">You sent <span class="text-decline">$200</span>
-                                                to
-                                                Taiwo Ogundeyi</h3>
-                                            <span class="text-grey fw-bold">now</span>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-uppercase">1 usd = n 72</p>
+
+                                            <button type="button"
+                                                class="btn btn-primary btn-lg px-5 py-3 fs-4 rounded-2 fw-bold align-self-end">Continue</button>
                                         </div>
-                                        <div class="ms-auto gap-3">
-                                            <svg class="icon-sm">
-                                                <use xlink:href="assets/zondicons_navigation-more.svg#Vector"></use>
-                                            </svg>
-                                            <svg class="icon-sm">
-                                                <use xlink:href="assets/ic_twotone-plus.svg#vector"></use>
-                                            </svg>
+                                    </div>
+                                </div>
+
+                                <div class="notifications">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="heading-2 m-0">notification</h2>
+
+                                        <div class="d-flex align-items-center gap-5 fs-5 text-capitalize fw-bolder">
+                                            <span>see all</span>
+
+                                            <div id="tag-4"
+                                                class="tag column-gap-3 bg-primary-light-1 p-3 d-flex align-items-center rounded-3">
+                                                <span>daily update</span>
+
+                                                <svg data-tag="4" class="currence__toggle-icon">
+                                                    <use xlink:href="assets/Arrow - Down 2 (1).svg#Arrow - Down 2">
+                                                    </use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="d-flex gap-5">
-                                        <div
-                                            class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
-                                            <svg class="icon-sm text-grey">
-                                                <use xlink:href="assets/Vector.svg#vector"></use>
-                                            </svg>
+                                    <div class="d-flex flex-column bg-white gap-5 p-5">
+                                        <div class="d-flex gap-5">
+                                            <div
+                                                class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
+                                                <svg class="icon-sm text-grey">
+                                                    <use xlink:href="assets/Vector.svg#vector"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="">
+                                                <h3 class="h-3 mb-3 fw-bold">
+                                                    You sent
+
+                                                    <span class="text-decline">$200</span> to Taiwo Ogundeyi
+                                                </h3>
+
+                                                <span class="text-grey fw-bold">now</span>
+                                            </div>
+
+                                            <div class="ms-auto gap-3">
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/zondicons_navigation-more.svg#Vector"></use>
+                                                </svg>
+
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/ic_twotone-plus.svg#vector"></use>
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="">
-                                            <h3 class="h-3 mb-3 fw-bold">You received <span
-                                                    class="text-complete">$1000</span>
-                                                to
-                                                Kehinde Ogundeyi</h3>
-                                            <span class="text-grey fw-bold">now</span>
-                                        </div>
-                                        <div class="ms-auto gap-3">
-                                            <svg class="icon-sm">
-                                                <use xlink:href="assets/zondicons_navigation-more.svg#Vector"></use>
-                                            </svg>
-                                            <svg class="icon-sm">
-                                                <use xlink:href="assets/ic_twotone-plus.svg#vector"></use>
-                                            </svg>
+
+                                        <div class="d-flex gap-5">
+                                            <div
+                                                class="icon-box bg-primary-light-1 rounded-2 d-flex align-items-center justify-content-center">
+                                                <svg class="icon-sm text-grey">
+                                                    <use xlink:href="assets/Vector.svg#vector"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="">
+                                                <h3 class="h-3 mb-3 fw-bold flex-grow-1">
+                                                    You received
+
+                                                    <span class="text-complete">$1000</span> from Kehinde Ogundeyi
+                                                </h3>
+
+                                                <span class="text-grey fw-bold">now</span>
+                                            </div>
+
+                                            <div class="ms-auto gap-3">
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/zondicons_navigation-more.svg#Vector"></use>
+                                                </svg>
+
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="assets/ic_twotone-plus.svg#vector"></use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
-                        <div class="main__side">
-                            <div class="credit__card shadow-lg d-flex flex-column text-light rounded-4 mb-4 px-5 py-4">
-                                <span class="fs-5 fw-semibold text-uppercase mb-4">olaogun hakeem</span>
 
-                                <svg class="icon-bg icon-chip mb-3 rounded-2">
-                                    <use xlink:href="assets/chip.svg#chip"></use>
-                                </svg>
-                                <div class="d-flex flex-column w-75">
-                                    <span class="d-flex justify-content-between credit__card--number mb-2 fs-3">
-                                        <span>0 0 0 0</span>
-                                        <span>8 8 8 8</span>
-                                        <span>2 2 2 2</span>
-                                        <span>3 3 3 3</span>
+                            <div class="dashboard__content--side d-flex flex-column">
+                                <div
+                                    class="credit__card align-self-center shadow-lg d-flex flex-column text-light rounded-4 mb-4 px-5 py-4">
+                                    <span class="credit__card--name fs-5 fw-semibold text-uppercase mb-4">
+                                        olaogun
+                                        hakeem
                                     </span>
 
-                                    <svg class="icon-sm align-self-center">
-                                        <use xlink:href="assets/Group 9.svg#Polygon 2"></use>
+                                    <svg class="icon-bg icon-chip rounded-2">
+                                        <use xlink:href="assets/chip.svg#chip"></use>
                                     </svg>
+
+                                    <div class="d-flex flex-column w-75">
+                                        <span class="d-flex justify-content-between credit__card--number mb-2 fs-3">
+                                            <span>0 0 0 0</span>
+
+                                            <span>8 8 8 8</span>
+
+                                            <span>2 2 2 2</span>
+
+                                            <span>3 3 3 3</span>
+                                        </span>
+
+                                        <svg class="icon-sm align-self-center">
+                                            <use xlink:href="assets/Group 9.svg#Polygon 2"></use>
+                                        </svg>
+                                    </div>
+
+                                    <div class="d-flex align-items-center column-gap-2 align-self-end">
+                                        <span class="credit__card--expire-text fw-normal lh-1">
+                                            VALID
+
+                                            <br>
+                                            TILL
+                                        </span>
+
+                                        <span class="credit__card--expire-date fs-5 fw-medium">07/24</span>
+
+                                        <img class="icon-sm" src="assets/Azapay ICON 03 1.png" alt="Azapay logo">
+                                    </div>
                                 </div>
 
-                                <div class="d-flex align-items-center column-gap-2 align-self-end">
-                                    <span class="credit__card--expire-text fw-normal lh-1">VALID<br>TILL</span>
-                                    <span class="credit__card--expire-date fs-5 fw-medium">07/24</span>
-                                    <img class="icon-sm" src="assets/Azapay ICON 03 1.png" alt="Azapay logo">
-                                </div>
-                            </div>
-                            <div class="transactions bg-white py-5 px-4 rounded-4">
-                                <div
-                                    class="transactions__header d-flex justify-content-between align-items-center mb-5">
-                                    <h2 class="heading-2 m-0">transactions</h2>
-                                    <div class="d-flex align-items-center gap-5 text-capitalize fw-bolder fs-5">
-                                        <span class="text-primary">all</span>
-                                        <span class="text-grey">send</span>
-                                        <span class="text-grey">recent</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column row-gap-3 fw-bold">
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$1,500</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Converted USD to NGN</span>
-                                            <span class="transactions__status text-complete">Completed</span>
+                                <div class="transactions bg-white py-5 px-4 rounded-4">
+                                    <div
+                                        class="transactions__header d-flex justify-content-between align-items-center mb-5">
+                                        <h2 class="heading-2 m-0">transactions</h2>
+
+                                        <div class="d-flex align-items-center gap-5 text-capitalize fw-bolder fs-5">
+                                            <span class="text-primary">all</span>
+
+                                            <span class="text-grey">send</span>
+
+                                            <span class="text-grey">recent</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$2,500</span>
+
+                                    <div class="d-flex flex-column row-gap-3 fw-bold">
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$1,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Converted USD to NGN</span>
+
+                                                <span class="transactions__status text-complete">Completed</span>
+                                            </div>
                                         </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Fund Wallet</span>
-                                            <span class="transactions__status text-pending">Pending</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$2,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Fund Wallet</span>
+
+                                                <span class="transactions__status text-pending">Pending</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$2,500</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$2,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Converted USD to NGN</span>
+
+                                                <span class="transactions__status text-complete">Completed</span>
+                                            </div>
                                         </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Converted USD to NGN</span>
-                                            <span class="transactions__status text-complete">Completed</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$1,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Converted USD to NGN</span>
+
+                                                <span class="transactions__status text-complete">Completed</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$1,500</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$2,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Fund Wallet</span>
+
+                                                <span class="transactions__status text-decline">Decline</span>
+                                            </div>
                                         </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Converted USD to NGN</span>
-                                            <span class="transactions__status text-complete">Completed</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$1,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Converted USD to NGN</span>
+
+                                                <span class="transactions__status text-complete">Completed</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$2,500</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Fund Wallet</span>
-                                            <span class="transactions__status text-decline">Decline</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$1,500</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Converted USD to NGN</span>
-                                            <span class="transactions__status text-complete">Completed</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
-                                        <div class="d-flex justify-content-between">
-                                            <span class="transactions__date fw-semibold text-grey">16:23, 12dec
-                                                2022</span>
-                                            <span class="transactions__amount fs-5">$1,500</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between fs-5">
-                                            <span class="transactions__type">Converted USD to NGN</span>
-                                            <span class="transactions__status text-complete">Completed</span>
+
+                                        <div class="d-flex flex-column row-gap-3 py-3 px-4 bg-primary-light-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="transactions__date fw-semibold text-grey">
+                                                    16:23, 12dec
+                                                    2022
+                                                </span>
+
+                                                <span class="transactions__amount fs-5">$1,500</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between fs-5">
+                                                <span class="transactions__type">Converted USD to NGN</span>
+
+                                                <span class="transactions__status text-complete">Completed</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            </div>
-            <aside class="sidebar  flex-column order-1">
-                <div class="website__logo d-flex align-items-center">
-                    <img src="assets/Azapay ICON 03 1.png" alt="Azapay logo" class="website__logo--img">
-                    <span class="website__logo--text">azapay</span>
+                    </main>
                 </div>
 
-                <ul class="side-nav p-0 fs-4">
-                    <li class="side-nav__item side-nav__item--active">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-grid_view"></use>
-                            </svg>
-                            <span>overview</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-wallet"></use>
-                            </svg>
-                            <span>wallets</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-swap_horiz"></use>
-                            </svg>
-                            <span>convert</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-credit-card"></use>
-                            </svg>
-                            <span>cards & receipients</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-library_books"></use>
-                            </svg>
-                            <span>transactions</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-add_shopping_cart"></use>
-                            </svg>
-                            <span>checkout for me</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <span class="notification__icon-box">
-                                <svg id="notification-icon" class="side-nav__icon">
-                                    <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                <aside class="sidebar  flex-column order-1">
+                    <div class="website__logo sidebar__website--logo d-flex align-items-center">
+                        <img src="assets/Azapay ICON 03 1.png" alt="Azapay logo" class="website__logo--img">
+
+                        <span class="website__logo--text">azapay</span>
+                    </div>
+
+                    <ul class="sidebar-nav p-0 fs-4">
+                        <li class="sidebar-nav__item sidebar-nav__item--active">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-grid_view"></use>
                                 </svg>
-                                <span class="notification-badge"></span>
-                            </span>
-                            <span>notification</span>
 
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="assets/sprite.svg#icon-logout"></use>
-                            </svg>
-                            <span>logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </aside>
-        </div>
+                                <span>overview</span>
+                            </a>
+                        </li>
 
-    </body>
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-wallet"></use>
+                                </svg>
+
+                                <span>wallets</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-swap_horiz"></use>
+                                </svg>
+
+                                <span>convert</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-credit-card"></use>
+                                </svg>
+
+                                <span>cards & receipients</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-library_books"></use>
+                                </svg>
+
+                                <span>transactions</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-add_shopping_cart"></use>
+                                </svg>
+
+                                <span>checkout for me</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <span class="notification__icon-box">
+                                    <svg id="notification-icon" class="sidebar-nav__icon">
+                                        <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                                    </svg>
+
+                                    <span class="notification-badge"></span>
+                                </span>
+
+                                <span>notification</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav__item">
+                            <a href="#" class="sidebar-nav__link">
+                                <svg class="sidebar-nav__icon">
+                                    <use xlink:href="assets/sprite.svg#icon-logout"></use>
+                                </svg>
+
+                                <span>logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </body>
+    </div>
 
 </html>
